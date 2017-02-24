@@ -3,7 +3,7 @@ package com.maven8919.movielister.com.maven8919.movielister.service;
 import com.gargoylesoftware.htmlunit.WebClient;
 import com.gargoylesoftware.htmlunit.html.DomElement;
 import com.gargoylesoftware.htmlunit.html.HtmlPage;
-import com.maven8919.movielister.com.maven8919.movielister.domain.Movie;
+import com.maven8919.movielister.com.maven8919.movielister.domain.MovieEntity;
 import org.jsoup.Connection;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -20,8 +20,8 @@ public class MovieRatingGetterService {
     public static final String DUCK_DUCK_GO_SEARCH_PREFIX = "https://duckduckgo.com/?q=";
     public static final String ROTTEN_TOMATOES_SUFFIX = " rotten tomatoes";
 
-    public Movie getRating(String title) {
-        Movie result = new Movie();
+    public MovieEntity getRating(String title) {
+        MovieEntity result = new MovieEntity();
         result.setTitle(title);
         result.setRating(0);
         result.setWantToWatch(true);

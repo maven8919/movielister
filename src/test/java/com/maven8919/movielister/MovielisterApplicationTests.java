@@ -1,8 +1,7 @@
 package com.maven8919.movielister;
 
-import com.maven8919.movielister.com.maven8919.movielister.domain.Movie;
+import com.maven8919.movielister.com.maven8919.movielister.domain.MovieEntity;
 import com.maven8919.movielister.com.maven8919.movielister.service.MovieRatingGetterService;
-import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -107,7 +106,7 @@ public class MovielisterApplicationTests {
 
     @Test
     public void testGetRatingShouldReturn93ForLaLaLand() {
-        Movie movie = movieRatingGetterService.getRating(LA_LA_LAND_MOVIE_TITLE);
+        MovieEntity movie = movieRatingGetterService.getRating(LA_LA_LAND_MOVIE_TITLE);
         assertEquals(LA_LA_LAND_SCORE, movie.getRating());
         assertTrue(movie.isWantToWatch());
         assertFalse(movie.isWatched());
@@ -115,25 +114,25 @@ public class MovielisterApplicationTests {
 
     @Test
     public void testGetRatingShouldReturn43ForXXX() {
-        Movie movie = movieRatingGetterService.getRating(XXX_MOVIE_TITLE);
+        MovieEntity movie = movieRatingGetterService.getRating(XXX_MOVIE_TITLE);
         assertEquals(XXX_SCORE, movie.getRating());
     }
 
     @Test
     public void testGetRatingShouldReturn98ForTheSalesman() {
-        Movie movie = movieRatingGetterService.getRating(THE_SALESMAN_MOVIE_TITLE);
+        MovieEntity movie = movieRatingGetterService.getRating(THE_SALESMAN_MOVIE_TITLE);
         assertEquals(SALESMAN_SCORE, movie.getRating());
     }
 
     @Test
     public void testGetRatingShouldReturn90ForJohnWick2() {
-        Movie movie = movieRatingGetterService.getRating(JOHN_WICK2_MOVIE_TITLE);
+        MovieEntity movie = movieRatingGetterService.getRating(JOHN_WICK2_MOVIE_TITLE);
         assertEquals(JOHN_WICK2_SCORE, movie.getRating());
     }
 
     @Test
     public void testGetRatingShouldReturn34ForDogsPurpose() {
-        Movie movie = movieRatingGetterService.getRating(DOGS_PURPOSE_MOVIE_TITLE);
+        MovieEntity movie = movieRatingGetterService.getRating(DOGS_PURPOSE_MOVIE_TITLE);
         assertEquals(DOGS_PURPOSE_SCORE, movie.getRating());
     }
 

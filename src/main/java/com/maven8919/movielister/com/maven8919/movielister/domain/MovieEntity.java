@@ -6,7 +6,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class Movie {
+public class MovieEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
