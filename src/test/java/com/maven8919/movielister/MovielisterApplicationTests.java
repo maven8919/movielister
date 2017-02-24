@@ -29,7 +29,7 @@ public class MovielisterApplicationTests {
     public static final String JOHN_WICK2_URL = "https://www.rottentomatoes.com/m/john_wick_chapter_2/";
     public static final String DOGS_PURPOSE_URL = "https://www.rottentomatoes.com/m/a_dogs_purpose/";
     public static final int XXX_SCORE = 43;
-    public static final int SALESMAN_SCORE = 98;
+    public static final int SALESMAN_SCORE = 97;
     public static final int JOHN_WICK2_SCORE = 90;
     public static final int DOGS_PURPOSE_SCORE = 34;
 
