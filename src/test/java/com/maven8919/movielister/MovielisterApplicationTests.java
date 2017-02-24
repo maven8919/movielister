@@ -109,6 +109,8 @@ public class MovielisterApplicationTests {
     public void testGetRatingShouldReturn93ForLaLaLand() {
         Movie movie = movieRatingGetterService.getRating(LA_LA_LAND_MOVIE_TITLE);
         assertEquals(LA_LA_LAND_SCORE, movie.getRating());
+        assertTrue(movie.isWantToWatch());
+        assertFalse(movie.isWatched());
     }
 
     @Test

@@ -24,6 +24,8 @@ public class MovieRatingGetterService {
         Movie result = new Movie();
         result.setTitle(title);
         result.setRating(0);
+        result.setWantToWatch(true);
+        result.setWatched(false);
         String rottenTomatoesUrl = convertTitleToRottenTomatoesUrl(title);
         if (!urlIsLive(rottenTomatoesUrl)) {
             rottenTomatoesUrl = getRottenTomatoesUrlThroughDuckDuckGo(title);
