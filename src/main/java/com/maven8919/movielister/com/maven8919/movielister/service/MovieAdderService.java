@@ -12,7 +12,7 @@ public class MovieAdderService {
     private MovieRepository movieRepository;
 
     public void saveMovie(MovieEntity movie) {
-        movieRepository.save(movie)
+        movieRepository.save(movie);
     }
 
 }
