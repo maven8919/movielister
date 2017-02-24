@@ -1,9 +1,9 @@
-package com.maven8919.movielister.com.maven8919.movielister.service;
+package com.maven8919.movielister.service;
 
 import com.gargoylesoftware.htmlunit.WebClient;
 import com.gargoylesoftware.htmlunit.html.DomElement;
 import com.gargoylesoftware.htmlunit.html.HtmlPage;
-import com.maven8919.movielister.com.maven8919.movielister.domain.MovieEntity;
+import com.maven8919.movielister.domain.MovieEntity;
 import org.jsoup.Connection;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;

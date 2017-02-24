@@ -1,7 +1,7 @@
 package com.maven8919.movielister;
 
-import com.maven8919.movielister.com.maven8919.movielister.domain.MovieEntity;
-import com.maven8919.movielister.com.maven8919.movielister.service.MovieRatingGetterService;
+import com.maven8919.movielister.domain.MovieEntity;
+import com.maven8919.movielister.service.MovieRatingGetterService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,7 +1,7 @@
-package com.maven8919.movielister.com.maven8919.movielister.service;
+package com.maven8919.movielister.service;
 
-import com.maven8919.movielister.com.maven8919.movielister.com.maven8919.movielister.repository.MovieRepository;
-import com.maven8919.movielister.com.maven8919.movielister.domain.MovieEntity;
+import com.maven8919.movielister.repository.MovieRepository;
+import com.maven8919.movielister.domain.MovieEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

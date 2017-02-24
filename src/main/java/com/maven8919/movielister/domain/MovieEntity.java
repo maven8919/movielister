@@ -1,4 +1,4 @@
-package com.maven8919.movielister.com.maven8919.movielister.domain;
+package com.maven8919.movielister.domain;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
