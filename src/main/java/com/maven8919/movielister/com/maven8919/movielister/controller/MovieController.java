@@ -14,12 +14,6 @@ public class MovieController {
 
     @RequestMapping(value = "/")
     public String movies() {
-        MovieEntity movie = new MovieEntity();
-        movie.setTitle("proba");
-        movie.setRating(22);
-        movie.setWantToWatch(false);
-        movie.setWatched(true);
-        movieAdderService.saveMovie(movie);
         return "movies";
     }
 
