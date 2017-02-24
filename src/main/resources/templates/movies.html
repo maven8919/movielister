@@ -8,11 +8,13 @@
     <title>Movies</title>
 </head>
 <body>
-<th:block th:each="movie : ${movies}">
-    <tr>
-        <td th:text="${movie.title}">Title</td>
-        <td th:text="${movie.rating}">Rating</td>
-    </tr>
-</th:block>
+<table class="table">
+    <th:block th:each="movie : ${movies}">
+        <tr>
+            <td th:text="${movie.title}">Title</td>
+            <td th:text="${movie.rating}">Rating</td>
+        </tr>
+    </th:block>
+</table>
 </body>
 </html>
