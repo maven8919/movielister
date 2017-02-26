@@ -15,6 +15,11 @@
             <td th:text="${movie.rating}">Rating</td>
         </tr>
     </th:block>
+    <th:block th:each="link : ${imdbLinks}">
+        <tr>
+            <td th:text="${link}">Link</td>
+        </tr>
+    </th:block>
 </table>
 </body>
 </html>

@@ -1,12 +1,17 @@
 package com.maven8919.movielister;
 
+import com.gargoylesoftware.htmlunit.WebClient;
+import com.gargoylesoftware.htmlunit.html.*;
 import com.maven8919.movielister.domain.MovieEntity;
 import com.maven8919.movielister.service.MovieRatingGetterService;
+import com.maven8919.movielister.service.NcoreCrawlerService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
+
+import java.io.IOException;
 
 import static junit.framework.TestCase.assertFalse;
 import static org.junit.Assert.assertEquals;
@@ -32,6 +37,7 @@ public class MovielisterApplicationTests {
     public static final int SALESMAN_SCORE = 97;
     public static final int JOHN_WICK2_SCORE = 90;
     public static final int DOGS_PURPOSE_SCORE = 34;
+    public static final int IMDB_LINK_COUNT = 100;
 
     @Autowired
     private MovieRatingGetterService movieRatingGetterService;
