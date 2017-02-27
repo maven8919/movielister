@@ -41,7 +41,7 @@ public class NcoreCrawlerService {
             HtmlPage hdMoviesPage = submitButton.click();
             List<HtmlAnchor> anchors = hdMoviesPage.getAnchors();
             result = anchors.stream()
-                    .filter(anchor -> anchor.getAttribute("href").startsWith("https://deferer.me/?"))
+                    .filter(anchor -> anchor.getAttribute("href").contains("dereferer"))
                     .map(anchor -> anchor.getAttribute("href").substring(22))
                     .collect(Collectors.toList());
         } catch (IOException e) {

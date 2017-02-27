@@ -42,6 +42,9 @@ public class MovielisterApplicationTests {
     @Autowired
     private MovieRatingGetterService movieRatingGetterService;
 
+    @Autowired
+    private NcoreCrawlerService ncoreCrawlerService;
+
     @Test
     public void testConvertChars() {
         assertEquals("l", movieRatingGetterService.convertChar('l'));
@@ -140,6 +143,11 @@ public class MovielisterApplicationTests {
     public void testGetRatingShouldReturn34ForDogsPurpose() {
         MovieEntity movie = movieRatingGetterService.getRating(DOGS_PURPOSE_MOVIE_TITLE);
         assertEquals(DOGS_PURPOSE_SCORE, movie.getRating());
+    }
+
+    @Test
+    public void testGetImdbLinksShouldReturn100Links() {
+        assertEquals(IMDB_LINK_COUNT, ncoreCrawlerService.getImdbLinks().size());
     }
 
 }
