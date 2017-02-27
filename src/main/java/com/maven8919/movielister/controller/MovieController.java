@@ -19,7 +19,6 @@ public class MovieController {
     @RequestMapping(value = "/")
     public String movies(Model model) {
         model.addAttribute("movies", movieViewFromMovieEntityTransformerService.getMovieViews());
-        model.addAttribute("imdbLinks", ncoreCrawlerService.getImdbLinks());
         return "movies";
     }
 
