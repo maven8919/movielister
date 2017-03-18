@@ -9,7 +9,6 @@ import javax.persistence.Id;
 public class MovieEntity {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
     private String title;
