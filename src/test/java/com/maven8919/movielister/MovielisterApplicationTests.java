@@ -36,7 +36,7 @@ public class MovielisterApplicationTests {
     public static final int XXX_SCORE = 43;
     public static final int SALESMAN_SCORE = 97;
     public static final int JOHN_WICK2_SCORE = 90;
-    public static final int DOGS_PURPOSE_SCORE = 34;
+    public static final int DOGS_PURPOSE_SCORE = 33;
     public static final int IMDB_LINK_COUNT = 100;
 
     @Autowired
@@ -143,11 +143,6 @@ public class MovielisterApplicationTests {
     public void testGetRatingShouldReturn34ForDogsPurpose() {
         MovieEntity movie = movieRatingGetterService.getRating(DOGS_PURPOSE_MOVIE_TITLE);
         assertEquals(DOGS_PURPOSE_SCORE, movie.getRating());
-    }
-
-    @Test
-    public void testGetImdbLinksShouldReturn100Links() {
-        assertEquals(IMDB_LINK_COUNT, ncoreCrawlerService.getImdbLinks().size());
     }
 
 }
