@@ -19,6 +19,9 @@ public class NcoreCrawlerService {
     private static final String SUBMIT_BUTTON_NAME = "submit";
     private static final String USERNAME_FIELD_NAME = "nev";
     private static final String PASSWORD_FIELD_NAME = "pass";
+    private static final String HREF_ATTRIBUTE = "href";
+    private static final int IMDB_LINK_START_INDEX = 22;
+    public static final String IMDB_LINK_INDICATOR = "dereferer";
 
     @Value("${ncore.username}")
     private String ncoreUsername;
@@ -41,8 +44,8 @@ public class NcoreCrawlerService {
             HtmlPage hdMoviesPage = submitButton.click();
             List<HtmlAnchor> anchors = hdMoviesPage.getAnchors();
             result = anchors.stream()
-                    .filter(anchor -> anchor.getAttribute("href").contains("dereferer"))
-                    .map(anchor -> anchor.getAttribute("href").substring(22))
+                    .filter(anchor -> anchor.getAttribute(HREF_ATTRIBUTE).contains(IMDB_LINK_INDICATOR))
+                    .map(anchor -> anchor.getAttribute(HREF_ATTRIBUTE).substring(IMDB_LINK_START_INDEX))
                     .collect(Collectors.toList());
         } catch (IOException e) {
             e.printStackTrace();
