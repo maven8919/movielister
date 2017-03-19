@@ -1,5 +1,6 @@
 package com.maven8919.movielister.controller;
 
+import com.maven8919.movielister.service.MovieListUpdaterService;
 import com.maven8919.movielister.service.MovieViewFromMovieEntityTransformerService;
 import com.maven8919.movielister.service.NcoreCrawlerService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,10 +15,11 @@ public class MovieController {
     private MovieViewFromMovieEntityTransformerService movieViewFromMovieEntityTransformerService;
 
     @Autowired
-    private NcoreCrawlerService ncoreCrawlerService;
+    private MovieListUpdaterService movieListUpdaterService;
 
     @RequestMapping(value = "/")
     public String movies(Model model) {
+        movieListUpdaterService.insertNewMoviesToDb();
         model.addAttribute("movies", movieViewFromMovieEntityTransformerService.getMovieViews());
         return "movies";
     }

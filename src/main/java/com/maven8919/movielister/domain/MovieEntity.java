@@ -9,12 +9,23 @@ import javax.persistence.Id;
 public class MovieEntity {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
     private String title;
     private int rating;
+    private String rottenTomatoesLink;
     private boolean wantToWatch;
     private boolean watched;
+
+    public String getRottenTomatoesLink() {
+        return rottenTomatoesLink;
+    }
+
+    public void setRottenTomatoesLink(String rottenTomatoesLink) {
+        this.rottenTomatoesLink = rottenTomatoesLink;
+    }
+
     public long getId() {
         return id;
     }

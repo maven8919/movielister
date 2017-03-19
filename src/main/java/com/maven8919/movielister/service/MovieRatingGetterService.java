@@ -32,6 +32,7 @@ public class MovieRatingGetterService {
         }
         int rating = getRatingFromUrl(rottenTomatoesUrl);
         result.setRating(rating);
+        result.setRottenTomatoesLink(rottenTomatoesUrl);
         return result;
     }
 
