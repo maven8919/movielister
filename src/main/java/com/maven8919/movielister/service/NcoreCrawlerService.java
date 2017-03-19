@@ -5,6 +5,7 @@ import com.gargoylesoftware.htmlunit.WebClient;
 import com.gargoylesoftware.htmlunit.html.*;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
+import org.w3c.dom.html.HTMLButtonElement;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -17,7 +18,7 @@ public class NcoreCrawlerService {
 
     private static final String NCORE_HD_MOVIES_LINK = "https://ncore.cc/torrents.php?tipus=hd";
     private static final String LOGIN_FORM_NAME = "login";
-    private static final String SUBMIT_BUTTON_NAME = "submit";
+    private static final String SUBMIT_BUTTON_NAME = "Login!";
     private static final String USERNAME_FIELD_NAME = "nev";
     private static final String PASSWORD_FIELD_NAME = "pass";
     private static final String HREF_ATTRIBUTE = "href";
@@ -40,7 +41,7 @@ public class NcoreCrawlerService {
         try {
             HtmlPage loginPage = webClient.getPage(NCORE_HD_MOVIES_LINK);
             HtmlForm form = loginPage.getFormByName(LOGIN_FORM_NAME);
-            HtmlSubmitInput submitButton =  form.getInputByName(SUBMIT_BUTTON_NAME);
+            HtmlSubmitInput submitButton =  form.getInputByValue(SUBMIT_BUTTON_NAME);
             HtmlTextInput usernameField =  form.getInputByName(USERNAME_FIELD_NAME);
             HtmlPasswordInput passwordField =  form.getInputByName(PASSWORD_FIELD_NAME);
             usernameField.setValueAttribute(ncoreUsername);
