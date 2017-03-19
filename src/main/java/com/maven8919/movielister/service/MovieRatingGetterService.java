@@ -58,7 +58,7 @@ public class MovieRatingGetterService {
             Elements scoreSpan = doc.select(".meter-value.superPageFontColor");
             String ratingPercentage = scoreSpan.get(0).text();
             result = Integer.parseInt(scratchPercentageSign(ratingPercentage));
-        } catch (IOException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
         return result;
