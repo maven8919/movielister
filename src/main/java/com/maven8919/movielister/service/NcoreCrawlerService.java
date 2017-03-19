@@ -1,5 +1,6 @@
 package com.maven8919.movielister.service;
 
+import com.gargoylesoftware.htmlunit.BrowserVersion;
 import com.gargoylesoftware.htmlunit.WebClient;
 import com.gargoylesoftware.htmlunit.html.*;
 import org.springframework.beans.factory.annotation.Value;
@@ -33,6 +34,9 @@ public class NcoreCrawlerService {
     public List<String> getImdbLinks() {
         List<String> result = new ArrayList<>();
         WebClient webClient = new WebClient();
+        webClient.getBrowserVersion().setBrowserLanguage("en-us");
+        webClient.getBrowserVersion().setSystemLanguage("en-us");
+        webClient.getBrowserVersion().setUserLanguage("en-us");
         try {
             HtmlPage loginPage = webClient.getPage(NCORE_HD_MOVIES_LINK);
             HtmlForm form = loginPage.getFormByName(LOGIN_FORM_NAME);
