@@ -18,7 +18,7 @@ public class NcoreCrawlerService {
 
     private static final String NCORE_HD_MOVIES_LINK = "https://ncore.cc/torrents.php?tipus=hd";
     private static final String LOGIN_FORM_NAME = "login";
-    private static final String SUBMIT_BUTTON_NAME = "Login!";
+    private static final String SUBMIT_BUTTON_NAME = "Belépés!";
     private static final String USERNAME_FIELD_NAME = "nev";
     private static final String PASSWORD_FIELD_NAME = "pass";
     private static final String HREF_ATTRIBUTE = "href";
