@@ -30,14 +30,12 @@ public class MovielisterApplicationTests {
     public static final String LA_LA_LAND_URL = "https://www.rottentomatoes.com/m/la_la_land/";
     public static final String XXX_URL = "https://www.rottentomatoes.com/m/xxx_return_of_xander_cage/";
     public static final String THE_SALESMAN_INCORRECT_URL = "https://www.rottentomatoes.com/m/the_salesman/";
-    public static final String THE_SALESMAN_CORRECT_URL = "https://www.rottentomatoes.com/m/the_salesman_2017/";
     public static final String JOHN_WICK2_URL = "https://www.rottentomatoes.com/m/john_wick_chapter_2/";
     public static final String DOGS_PURPOSE_URL = "https://www.rottentomatoes.com/m/a_dogs_purpose/";
     public static final int XXX_SCORE = 43;
     public static final int SALESMAN_SCORE = 97;
     public static final int JOHN_WICK2_SCORE = 90;
     public static final int DOGS_PURPOSE_SCORE = 33;
-    public static final int IMDB_LINK_COUNT = 100;
 
     @Autowired
     private MovieRatingGetterService movieRatingGetterService;

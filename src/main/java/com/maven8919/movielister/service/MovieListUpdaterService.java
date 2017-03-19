@@ -12,8 +12,16 @@ public class MovieListUpdaterService {
     @Autowired
     private NcoreCrawlerService ncoreCrawlerService;
 
+    @Autowired
+    private MovieNameFromImdbLinkService movieNameFromImdbLinkService;
+
+
+
     //@Scheduled(fixedRate = 20000)
     public void insertNewMoviesToDb() {
         List<String> imdbLinks = ncoreCrawlerService.getImdbLinks();
+        imdbLinks.stream()
+                .map(movieNameFromImdbLinkService::getMovieNameFromImdbLine)
+                .filter(movieName -> !"".equals(movieName));
     }
 }
