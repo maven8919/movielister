@@ -9,17 +9,26 @@
 </head>
 <body>
 <table class="table">
-    <th:block th:each="movie : ${movies}">
+    <thead>
         <tr>
-            <td th:text="${movie.title}">Title</td>
-            <td th:text="${movie.rating}">Rating</td>
+            <th>Title</th>
+            <th>Rating</th>
+            <th>Rotten Tomatoes Link</th>
+            <th>Want to watch</th>
+            <th>Watched</th>
         </tr>
-    </th:block>
-    <th:block th:each="link : ${imdbLinks}">
-        <tr>
-            <td th:text="${link}">Link</td>
-        </tr>
-    </th:block>
+    </thead>
+    <tbody>
+        <th:block th:each="movie : ${movies}">
+            <tr>
+                <td th:text="${movie.title}">Title</td>
+                <td th:text="${movie.rating}">Rating</td>
+                <td th:text="${movie.rottenTomatoesLink}">Rotten Tomatoes Link</td>
+                <td th:text="${movie.wantToWatch}">Want to watch</td>
+                <td th:text="${movie.watched}">Watched</td>
+            </tr>
+        </th:block>
+    </tbody>
 </table>
 </body>
 </html>
