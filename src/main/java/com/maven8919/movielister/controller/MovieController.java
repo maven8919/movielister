@@ -12,9 +12,6 @@ public class MovieController {
     @Autowired
     private MovieViewFromMovieEntityTransformerService movieViewFromMovieEntityTransformerService;
 
-    @Autowired
-    private MovieListUpdaterService movieListUpdaterService;
-
     @RequestMapping(value = "/")
     public String movies(Model model) {
         model.addAttribute("movies", movieViewFromMovieEntityTransformerService.getMovieViews());
