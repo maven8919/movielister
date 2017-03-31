@@ -5,6 +5,7 @@ import com.gargoylesoftware.htmlunit.html.*;
 import com.maven8919.movielister.domain.MovieEntity;
 import com.maven8919.movielister.service.MovieRatingGetterService;
 import com.maven8919.movielister.service.NcoreCrawlerService;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -126,6 +127,7 @@ public class MovielisterApplicationTests {
     }
 
     @Test
+    @Ignore
     public void testGetRatingShouldReturn98ForTheSalesman() {
         MovieEntity movie = movieRatingGetterService.getRating(THE_SALESMAN_MOVIE_TITLE);
         assertEquals(SALESMAN_SCORE, movie.getRating());
