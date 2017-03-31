@@ -19,7 +19,6 @@ public class MovieController {
 
     @RequestMapping(value = "/")
     public String movies(Model model) {
-        movieListUpdaterService.insertNewMoviesToDb();
         model.addAttribute("movies", movieViewFromMovieEntityTransformerService.getMovieViews());
         return "movies";
     }

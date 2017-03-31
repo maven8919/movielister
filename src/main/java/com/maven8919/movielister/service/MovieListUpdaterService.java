@@ -23,7 +23,6 @@ public class MovieListUpdaterService {
     @Autowired
     private MovieRepository movieRepository;
 
-    //@Scheduled(fixedRate = 20000)
     public void insertNewMoviesToDb() {
         List<String> imdbLinks = ncoreCrawlerService.getImdbLinks();
         imdbLinks.stream()
