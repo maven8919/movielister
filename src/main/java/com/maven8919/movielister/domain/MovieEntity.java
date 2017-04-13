@@ -14,6 +14,7 @@ public class MovieEntity {
 
     private String title;
     private int rating;
+    private int numberOfReviews;
     private String rottenTomatoesLink;
     private boolean wantToWatch;
     private boolean watched;
@@ -44,6 +45,14 @@ public class MovieEntity {
 
     public int getRating() {
         return rating;
+    }
+
+    public int getNumberOfReviews() {
+        return numberOfReviews;
+    }
+
+    public void setNumberOfReviews(int numberOfReviews) {
+        this.numberOfReviews = numberOfReviews;
     }
 
     public void setRating(int rating) {
