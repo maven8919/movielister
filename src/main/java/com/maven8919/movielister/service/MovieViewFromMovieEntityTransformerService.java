@@ -24,6 +24,7 @@ public class MovieViewFromMovieEntityTransformerService {
         MovieView result = new MovieView();
         result.setTitle(movie.getTitle());
         result.setRating(movie.getRating());
+        result.setNumberOfReviews(movie.getNumberOfReviews());
         result.setRottenTomatoesLink(movie.getRottenTomatoesLink());
         result.setWantToWatch(movie.isWantToWatch());
         result.setWatched(movie.isWatched());

@@ -4,6 +4,7 @@ public class MovieView {
 
     private String title;
     private int rating;
+    private int numberOfReviews;
     private String rottenTomatoesLink;
     private boolean wantToWatch;
     private boolean watched;
@@ -46,5 +47,13 @@ public class MovieView {
 
     public int getRating() {
         return rating;
+    }
+
+    public int getNumberOfReviews() {
+        return numberOfReviews;
+    }
+
+    public void setNumberOfReviews(int numberOfReviews) {
+        this.numberOfReviews = numberOfReviews;
     }
 }
