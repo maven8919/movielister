@@ -6,11 +6,12 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
 @Component
-public class MovieCmdRunner implements CommandLineRunner{
+//public class MovieCmdRunner implements CommandLineRunner{
+public class MovieCmdRunner {
 
     @Autowired private MovieRepository movieRepository;
 
-    @Override
+//    @Override
     public void run(String... strings) throws Exception {
         MovieEntity movieEntity = new MovieEntity();
         movieEntity.setId(1l);
