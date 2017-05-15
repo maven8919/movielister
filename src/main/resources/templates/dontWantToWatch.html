@@ -29,7 +29,7 @@
                 <td th:text="${movie.title}">Title</td>
                 <td th:text="${movie.rating}">Rating</td>
                 <td th:text="${movie.numberOfReviews}">Number of Reviews</td>
-                <td th:text="${movie.rottenTomatoesLink}">Rotten Tomatoes Link</td>
+                <td><a href="ownerDetails.html" th:href="@{|${movie.rottenTomatoesLink}|}" target="_blank" th:text="${movie.title}">Rotten Tomatoes Link</a></td>
                 <td><a href="ownerDetails.html" th:href="@{|/movies/watched/${movie.title}|}">Watched</a></td>
                 <td><a href="ownerDetails.html" th:href="@{|/movies/dontWantToWatch/${movie.title}|}">Don't want to watch</a></td>
             </tr>
