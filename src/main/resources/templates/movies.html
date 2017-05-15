@@ -5,18 +5,22 @@
     <script type="text/javascript" src="/webjars/jquery/3.1.1-1/jquery.min.js"></script>
     <script type="text/javascript" src="/webjars/bootstrap/3.3.7-1/js/bootstrap.min.js"></script>
     <link rel='stylesheet' href='/webjars/bootstrap/3.3.7-1/css/bootstrap.min.css'/>
+    <link rel='stylesheet' href='/webjars/font-awesome/4.7.0/css/font-awesome.css'/>
+
     <title>Movies</title>
 </head>
 <body>
-<table class="table">
+<div th:replace="fragments/links :: links"></div>
+<div class="container">
+<table class="table table-bordered" style="margin-top:100px;">
     <thead>
         <tr>
             <th>Title</th>
             <th>Rating</th>
             <th>Number of Reviews</th>
             <th>Rotten Tomatoes Link</th>
-            <th>Want to watch</th>
             <th>Watched</th>
+            <th>Don't want to watch</th>
         </tr>
     </thead>
     <tbody>
@@ -26,11 +30,12 @@
                 <td th:text="${movie.rating}">Rating</td>
                 <td th:text="${movie.numberOfReviews}">Number of Reviews</td>
                 <td th:text="${movie.rottenTomatoesLink}">Rotten Tomatoes Link</td>
-                <td th:text="${movie.wantToWatch}">Want to watch</td>
-                <td th:text="${movie.watched}">Watched</td>
+                <td><a href="ownerDetails.html" th:href="@{|/movies/watchedMovie/${movie.title}|}">Watched</a></td>
+                <td><a href="ownerDetails.html" th:href="@{|/movies/dontWantToWatch/${movie.title}|}">Don't want to watch</a></td>
             </tr>
         </th:block>
     </tbody>
 </table>
+</div>
 </body>
 </html>

@@ -17,6 +17,13 @@ public class MovieViewFromMovieEntityTransformerService {
 
     public List<MovieView> getMovieViews() {
         List<MovieEntity> movies = movieRepository.findAll();
+        return movies.stream()
+                .filter(movie -> !movie.isWatched())
+                .filter(movie -> movie.isWantToWatch())
+                .map(movie -> convertMovieEntityToView(movie)).collect(Collectors.toList());
+    }
+
+    public List<MovieView> getMovieViews(List<MovieEntity> movies) {
         return movies.stream().map(movie -> convertMovieEntityToView(movie)).collect(Collectors.toList());
     }
 
